@@ -27,13 +27,15 @@ Requirements
 
 To run the pipeline locally you need:
 
-* ``Java 8``
-* ``Cromwell, the WDL runner``
+* ``git clone https://github.com/ENCODE-DCC/rna-seq-pipeline.git``
+* Java 8
+* `Cromwell, the WDL runner <http://cromwell.readthedocs.io/en/develop/tutorials/FiveMinuteIntro/>`_
 
 To run the pipeline on DNANexus cloud you need:
 
-* ``Account to DNANexus (note, computation is not free)``
-
+* ``git clone https://github.com/ENCODE-DCC/rna-seq-pipeline.git``
+* Account to DNAnexus (note, computation is not free)
+* `DxWDL compiler <https://github.com/dnanexus/dxWDL>`_
 
 
 .. _quickstart:
