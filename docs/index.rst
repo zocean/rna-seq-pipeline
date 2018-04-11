@@ -25,10 +25,15 @@ This code runs the ``ENCODE RNA-seq pipeline``.
 Requirements
 ++++++++++++
 
-For running the pipeline locally you need:
+To run the pipeline locally you need:
 
 * ``Java 8``
 * ``Cromwell, the WDL runner``
+
+To run the pipeline on DNANexus cloud you need:
+
+*``Account to DNANexus (note, computation is not free)``
+
 
 
 .. _quickstart:
