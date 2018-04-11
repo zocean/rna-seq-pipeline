@@ -1,0 +1,71 @@
+.. ENCODE RNA-seq pipeline documentation master file, created by
+   sphinx-quickstart on Fri Mar 30 10:43:26 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to ENCODE RNA-seq pipeline's documentation!
+===================================================
+This code runs the ``ENCODE RNA-seq pipeline``.
+
+.. image:: https://www.genome.gov/images/feature_images/encode_logo.gif
+   :alt: Link to encode_logo
+   :align: center
+   :target: https://www.encodeproject.org
+
+:Version:
+  |version|
+:Authors:
+  `ENCODE Data Coordinating Center <https://www.encodeproject.org>`_
+:License:
+  MIT
+:Website:
+  https://github.com/ENCODE-DCC/rna-seq-pipeline/
+
+
+Requirements
+++++++++++++
+
+To run the pipeline locally you need:
+
+* ``Java 8``
+* ``Cromwell, the WDL runner``
+
+To run the pipeline on DNANexus cloud you need:
+
+* ``Account to DNANexus (note, computation is not free)``
+
+
+
+.. _quickstart:
+
+Quickstart
+++++++++++++
+
+
+Generating WDL
++++++++++++++++++++++
+
+
+
+Limitations
++++++++++++
+
+
+      
+Contents
+==========
+
+.. toctree::
+   :maxdepth: 2
+             
+   tutorials
+   howto
+   reference
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
