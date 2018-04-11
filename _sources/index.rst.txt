@@ -34,6 +34,9 @@ To run the pipeline locally you need:
 To run the pipeline on DNANexus cloud you need:
 
 * ``git clone https://github.com/ENCODE-DCC/rna-seq-pipeline.git``
+* Java 8+
+* `dx-toolkit <https://wiki.dnanexus.com/downloads>`_
+* python 2.7
 * Account to DNAnexus (note, computation is not free)
 * `DxWDL compiler <https://github.com/dnanexus/dxWDL>`_
 
