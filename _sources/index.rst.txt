@@ -28,12 +28,12 @@ Requirements
 To run the pipeline locally you need:
 
 * ``Java 8``
-* ``Cromwell, the WDL runner``
+* ``Cromwell, the WDL runner <www.google.com>``_
 
 To run the pipeline on DNANexus cloud you need:
 
 * ``Account to DNANexus (note, computation is not free)``
-made a change, yo
+
 
 
 .. _quickstart:
