@@ -32,7 +32,7 @@ To run the pipeline locally you need:
 
 To run the pipeline on DNANexus cloud you need:
 
-*``Account to DNANexus (note, computation is not free)``
+* ``Account to DNANexus (note, computation is not free)``
 
 
 
