@@ -30,6 +30,7 @@ To run the pipeline locally you need:
 * ``git clone https://github.com/ENCODE-DCC/rna-seq-pipeline.git``
 * Java 8
 * `Cromwell, the WDL runner <http://cromwell.readthedocs.io/en/develop/tutorials/FiveMinuteIntro/>`_
+* `Docker <https://docs.docker.com/install/>`_
 
 To run the pipeline on DNAnexus cloud you need:
 
