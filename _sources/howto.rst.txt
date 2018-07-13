@@ -40,7 +40,12 @@ how
 The workflow for running the pipeline is rna-seq-pipeline/rna-seq-pipeline.wdl. Input file templates can be found in rna-seq-pipeline/input_json_templates. 
 Local run command is::
 
-    $ java -jar -Dconfig.file=backends/backend.conf cromwell.jar run rna-seq-pipeline.wdl -i your_input_here.json -o workflow_opts/docker.json -m metadata.json
+    java -jar -Dconfig.file=backends/backend.conf cromwell.jar run rna-seq-pipeline.wdl -i [your input.json here] -o workflow_opts/docker.json -m metadata.json
+
+Run command with compute on Google Cloud is::
+
+    java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=google -Dbackend.providers.google.config.project=[your google cloud project name here] -Dbackend.providers.google.config.root=[your output bucket here] cromwell-32.jar run rna-seq-pipeline.wdl -i [your input.json here] -o workflow_opts/docker.json
 
 why
 ^^^^^
+Because RNA-seq data is awesome!
