@@ -16,6 +16,11 @@ Example input for this workflow looks like this::
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
+* ``merge_anno.annotation``
+* ``merge_anno.tRNA``
+* ``merge_anno.spikeins``
+* ``merge_anno.output_filename``
+
 Build Index
 -------------
 Example input for this workflow looks like this::
@@ -31,6 +36,13 @@ Example input for this workflow looks like this::
 
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
+
+* ``build_index.reference_genome``
+* ``build_index.spikeins``
+* ``build_index.annotation``
+* ``build_index.anno_version``
+* ``build_index.genome``
+* ``build_index.index_type``
 
 RNA-sequencing pipeline
 ------------------------
@@ -56,3 +68,13 @@ Description of inputs
 
 * ``rna.fastqs_R1``
 * ``rna.fastqs_R2``
+* ``rna.aligner``
+* ``rna.index``
+* ``rna.endedness``
+* ``rna.align_ncpus``
+* ``rna.align_ramGB``
+* ``rna.bamroot``
+* ``rna.strandedness``
+* ``rna.strandedness_direction``
+* ``rna.chrom_sizes``
+* ``rna.rsem_index``
