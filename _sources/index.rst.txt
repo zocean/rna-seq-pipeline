@@ -27,17 +27,17 @@ Requirements
 
 To run the pipeline locally you need:
 
-* ``Java 8``
-* ``Cromwell, the WDL runner``
+* Java 8
+* `Cromwell <https://github.com/broadinstitute/cromwell>_`, the WDL runner 
 
 To run the pipeline on DNANexus cloud you need:
 
-* ``Account to DNANexus``
+* Account to DNANexus
 * More detailed instructions in https://encode-dcc.github.io/wdl-pipelines/install.html#dnanexus-platform
 
 To run the pipeline on Google Cloud you need:
 
-* ``Account to Google Cloud``
+* Account to Google Cloud
 * More detailed instructions in https://encode-dcc.github.io/wdl-pipelines/install.html#google-cloud-platform
 
 
