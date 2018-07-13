@@ -33,7 +33,7 @@
             
   <div class="section" id="inputs">
 <h1>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h1>
-<p>This page shows an example input for each workflow associated to the RNA-sequencing pipeline. After example, each input item is described individually in more detail</p>
+<p>This page shows an example input for each workflow associated to the RNA-sequencing pipeline. After example, each input item is described individually in more detail.</p>
 <div class="section" id="merge-annotation">
 <h2>Merge Annotation<a class="headerlink" href="#merge-annotation" title="Permalink to this headline">¶</a></h2>
 <p>Example input for this workflow looks like this:</p>
@@ -44,6 +44,9 @@
     <span class="s2">&quot;merge_anno.output_filename&quot;</span> <span class="p">:</span> <span class="s2">&quot;merged_annotation.gtf.gz&quot;</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="section" id="description-of-inputs">
+<h3>Description of inputs<a class="headerlink" href="#description-of-inputs" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="build-index">
@@ -59,24 +62,33 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="section" id="id1">
+<h3>Description of inputs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="rna-sequencing-pipeline">
 <h2>RNA-sequencing pipeline<a class="headerlink" href="#rna-sequencing-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>Example input for this workflow looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;rna.fastqs_R1&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;rna.fastqs_R2&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;rna.aligner&quot;</span> <span class="p">:</span> <span class="s2">&quot;star&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.index&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.endedness&quot;</span> <span class="p">:</span> <span class="s2">&quot;paired&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.align_ncpus&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s2">&quot;rna.align_ramGB&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="s2">&quot;rna.bamroot&quot;</span> <span class="p">:</span> <span class="s2">&quot;foo_bam&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.strandedness&quot;</span> <span class="p">:</span> <span class="s2">&quot;unstranded&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.strandedness_direction&quot;</span> <span class="p">:</span> <span class="s2">&quot;unstranded&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.chrom_sizes&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rna.rsem_index&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz&quot;</span>
-<span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
+    &quot;rna.fastqs_R1&quot; : [&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;, &quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;],
+    &quot;rna.fastqs_R2&quot; : [&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;, &quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;],
+    &quot;rna.aligner&quot; : &quot;star&quot;,
+    &quot;rna.index&quot; : &quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz&quot;,
+    &quot;rna.endedness&quot; : &quot;paired&quot;,
+    &quot;rna.align_ncpus&quot; : 3,
+    &quot;rna.align_ramGB&quot; : 4,
+    &quot;rna.bamroot&quot; : &quot;foo_bam&quot;,
+    &quot;rna.strandedness&quot; : &quot;unstranded&quot;,
+    &quot;rna.strandedness_direction&quot; : &quot;unstranded&quot;,
+    &quot;rna.chrom_sizes&quot; : &quot;/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes&quot;,
+    &quot;rna.rsem_index&quot; : &quot;/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz&quot;
+}
+
+Description of inputs
+^^^^^^^^^^^^^^^^^^^^^^
+
+``rna.fastqs_R1``
+``rna.fastqs_R2``
 </pre></div>
 </div>
 </div>
@@ -91,8 +103,14 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Inputs</a><ul>
-<li><a class="reference internal" href="#merge-annotation">Merge Annotation</a></li>
-<li><a class="reference internal" href="#build-index">Build Index</a></li>
+<li><a class="reference internal" href="#merge-annotation">Merge Annotation</a><ul>
+<li><a class="reference internal" href="#description-of-inputs">Description of inputs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#build-index">Build Index</a><ul>
+<li><a class="reference internal" href="#id1">Description of inputs</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#rna-sequencing-pipeline">RNA-sequencing pipeline</a></li>
 </ul>
 </li>

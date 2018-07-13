@@ -1,6 +1,6 @@
 Inputs
 ====================================================
-This page shows an example input for each workflow associated to the RNA-sequencing pipeline. After example, each input item is described individually in more detail
+This page shows an example input for each workflow associated to the RNA-sequencing pipeline. After example, each input item is described individually in more detail.
 
 Merge Annotation
 -----------------
@@ -12,6 +12,9 @@ Example input for this workflow looks like this::
         "merge_anno.spikeins" : "rna-seq-pipeline/test_data/ERCC_phiX.fa.gz",
         "merge_anno.output_filename" : "merged_annotation.gtf.gz"
     } 
+
+Description of inputs
+^^^^^^^^^^^^^^^^^^^^^^
 
 Build Index
 -------------
@@ -25,6 +28,9 @@ Example input for this workflow looks like this::
         "build_index.genome" : "GRCh38",
         "build_index.index_type" : "prep_star"
     }
+
+Description of inputs
+^^^^^^^^^^^^^^^^^^^^^^
 
 RNA-sequencing pipeline
 ------------------------
@@ -44,3 +50,9 @@ Example input for this workflow looks like this::
         "rna.chrom_sizes" : "/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes",
         "rna.rsem_index" : "/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz"
     }
+
+    Description of inputs
+    ^^^^^^^^^^^^^^^^^^^^^^
+
+    ``rna.fastqs_R1``
+    ``rna.fastqs_R2``
