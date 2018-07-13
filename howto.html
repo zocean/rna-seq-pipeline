@@ -37,16 +37,29 @@
 <h2>Merge annotation<a class="headerlink" href="#merge-annotation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what">
 <h3>what<a class="headerlink" href="#what" title="Permalink to this headline">¶</a></h3>
+<p>This step takes a gene annotation (e.g. gencode.v19.annotation.gtf.gz) gzipped gtf file, the corresponding tRNA gzipped gtf and a spike-in set (e.g. ERCC) gzipped fasta file and combines them into a single merged annotation gzipped gtf file.</p>
 </div>
 <div class="section" id="how">
 <h3>how<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h3>
+<p>The workflow for running this step is rna-seq-pipeline/per_task_wdl/merge_anno.wdl, and a template for an input file is in rna-seq-pipeline/input_json_templates/per_task_inputs/merge_anno_input.json</p>
 </div>
 <div class="section" id="why">
 <h3>why<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h3>
+<p>The merged annotation file this step produces, is used by the index building steps.</p>
 </div>
 </div>
 <div class="section" id="build-index">
 <h2>Build index<a class="headerlink" href="#build-index" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>what<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This step takes the merged annotation file produced by the previous step, and a reference genome file and builds index file for STAR or RSEM. This step needs to be run only once for each reference and downstream program (STAR/RSEM).
+how
+^^^^^
+The workflow for running this step is rna-seq-pipeline/per_task_wdl/build_genome_index.wdl. Input file templates can be found in rna-seq-pipeline/input_json_templates/per_task_inputs/build_index_RSEM.json and rna-seq-pipeline/input_json_templates/per_task_inputs/build_index_STAR.json.
+why
+^^^^
+To be able run alignment (STAR) and quantification (RSEM) relatively fast, the genome needs to be indexed to a format that can be used by downstream programs.</p>
+</div>
 </div>
 <div class="section" id="rna-sequencing-pipeline">
 <h2>RNA sequencing pipeline<a class="headerlink" href="#rna-sequencing-pipeline" title="Permalink to this headline">¶</a></h2>
@@ -68,7 +81,10 @@
 <li><a class="reference internal" href="#why">why</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#build-index">Build index</a></li>
+<li><a class="reference internal" href="#build-index">Build index</a><ul>
+<li><a class="reference internal" href="#id1">what</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#rna-sequencing-pipeline">RNA sequencing pipeline</a></li>
 </ul>
 </li>

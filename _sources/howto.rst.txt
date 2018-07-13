@@ -5,13 +5,27 @@ Merge annotation
 ------------------
 what
 ^^^^^
+This step takes a gene annotation (e.g. gencode.v19.annotation.gtf.gz) gzipped gtf file, the corresponding tRNA gzipped gtf and a spike-in set (e.g. ERCC) gzipped fasta file and combines them into a single merged annotation gzipped gtf file. 
+
 how
 ^^^^^
+The workflow for running this step is rna-seq-pipeline/per_task_wdl/merge_anno.wdl, and a template for an input file is in rna-seq-pipeline/input_json_templates/per_task_inputs/merge_anno_input.json 
+
 why
 ^^^^^^
+The merged annotation file this step produces, is used by the index building steps. 
 
 Build index
 --------------
+what
+^^^^^
+This step takes the merged annotation file produced by the previous step, and a reference genome file and builds index file for STAR or RSEM. This step needs to be run only once for each reference and downstream program (STAR/RSEM).
+how
+^^^^^
+The workflow for running this step is rna-seq-pipeline/per_task_wdl/build_genome_index.wdl. Input file templates can be found in rna-seq-pipeline/input_json_templates/per_task_inputs/build_index_RSEM.json and rna-seq-pipeline/input_json_templates/per_task_inputs/build_index_STAR.json.
+why
+^^^^
+To be able run alignment (STAR) and quantification (RSEM) relatively fast, the genome needs to be indexed to a format that can be used by downstream programs.
 
 RNA sequencing pipeline
 -------------------------
