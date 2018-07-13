@@ -3,6 +3,12 @@ How-to guides
 
 Merge annotation
 ------------------
+what
+^^^^^
+how
+^^^^^
+why
+^^^^^^
 
 Build index
 --------------
