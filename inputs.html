@@ -69,27 +69,26 @@
 <div class="section" id="rna-sequencing-pipeline">
 <h2>RNA-sequencing pipeline<a class="headerlink" href="#rna-sequencing-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>Example input for this workflow looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
-    &quot;rna.fastqs_R1&quot; : [&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;, &quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;],
-    &quot;rna.fastqs_R2&quot; : [&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;, &quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;],
-    &quot;rna.aligner&quot; : &quot;star&quot;,
-    &quot;rna.index&quot; : &quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz&quot;,
-    &quot;rna.endedness&quot; : &quot;paired&quot;,
-    &quot;rna.align_ncpus&quot; : 3,
-    &quot;rna.align_ramGB&quot; : 4,
-    &quot;rna.bamroot&quot; : &quot;foo_bam&quot;,
-    &quot;rna.strandedness&quot; : &quot;unstranded&quot;,
-    &quot;rna.strandedness_direction&quot; : &quot;unstranded&quot;,
-    &quot;rna.chrom_sizes&quot; : &quot;/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes&quot;,
-    &quot;rna.rsem_index&quot; : &quot;/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz&quot;
-}
-
-Description of inputs
-^^^^^^^^^^^^^^^^^^^^^^
-
-``rna.fastqs_R1``
-``rna.fastqs_R2``
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;rna.fastqs_R1&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;rna.fastqs_R2&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;rna.aligner&quot;</span> <span class="p">:</span> <span class="s2">&quot;star&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.index&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.endedness&quot;</span> <span class="p">:</span> <span class="s2">&quot;paired&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.align_ncpus&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;rna.align_ramGB&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;rna.bamroot&quot;</span> <span class="p">:</span> <span class="s2">&quot;foo_bam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.strandedness&quot;</span> <span class="p">:</span> <span class="s2">&quot;unstranded&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.strandedness_direction&quot;</span> <span class="p">:</span> <span class="s2">&quot;unstranded&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.chrom_sizes&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.rsem_index&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz&quot;</span>
+<span class="p">}</span>
 </pre></div>
+</div>
+<div class="section" id="id2">
+<h3>Description of inputs<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R1</span></code>
+<code class="docutils literal notranslate"><span class="pre">rna.fastqs_R2</span></code></p>
 </div>
 </div>
 </div>
@@ -111,7 +110,10 @@ Description of inputs
 <li><a class="reference internal" href="#id1">Description of inputs</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rna-sequencing-pipeline">RNA-sequencing pipeline</a></li>
+<li><a class="reference internal" href="#rna-sequencing-pipeline">RNA-sequencing pipeline</a><ul>
+<li><a class="reference internal" href="#id2">Description of inputs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
