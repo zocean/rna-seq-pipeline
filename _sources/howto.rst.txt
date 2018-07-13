@@ -31,3 +31,12 @@ To be able run alignment (STAR) and quantification (RSEM) relatively fast, the g
 
 RNA sequencing pipeline
 -------------------------
+what
+^^^^^^
+This is the main workflow for processing RNA-sequencing data.
+
+how
+^^^^^^
+
+why
+^^^^^
