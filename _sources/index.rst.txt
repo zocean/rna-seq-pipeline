@@ -53,7 +53,7 @@ The main use of the pipeline is to alignment of reads, signal track generation, 
 
 Quickstart
 ===========
-
+After choosing the platform, setting that up and downloading the indexes, see `HOWTO <howto.html>`_.
 
 
       
