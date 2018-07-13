@@ -17,7 +17,30 @@ Build Index
 -------------
 Example input for this workflow looks like this::
 
+    {
+        "build_index.reference_genome" : "rna-seq-pipeline/test_data/GRCh38_no_alt_analysis_set_GCA_000001405.15_onlychr19.fa.gz",
+        "build_index.spikeins" : "rna-seq-pipeline/test_data/ERCC_phiX.fa.gz",
+        "build_index.annotation" : "rna-seq-pipeline/test_data/gencodeV24pri-tRNAs-ERCC-phiX_onlychr19_and_spikeins.gtf.gz",
+        "build_index.anno_version" : "v24",
+        "build_index.genome" : "GRCh38",
+        "build_index.index_type" : "prep_star"
+    }
 
 RNA-sequencing pipeline
 ------------------------
 Example input for this workflow looks like this:
+
+    {
+        "rna.fastqs_R1" : ["/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz", "/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz"],
+        "rna.fastqs_R2" : ["/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz", "/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz"],
+        "rna.aligner" : "star",
+        "rna.index" : "/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz",
+        "rna.endedness" : "paired",
+        "rna.align_ncpus" : 3,
+        "rna.align_ramGB" : 4,
+        "rna.bamroot" : "foo_bam",
+        "rna.strandedness" : "unstranded",
+        "rna.strandedness_direction" : "unstranded",
+        "rna.chrom_sizes" : "/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes",
+        "rna.rsem_index" : "/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz"
+    }

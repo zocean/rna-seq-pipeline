@@ -49,10 +49,38 @@
 <div class="section" id="build-index">
 <h2>Build Index<a class="headerlink" href="#build-index" title="Permalink to this headline">¶</a></h2>
 <p>Example input for this workflow looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;build_index.reference_genome&quot;</span> <span class="p">:</span> <span class="s2">&quot;rna-seq-pipeline/test_data/GRCh38_no_alt_analysis_set_GCA_000001405.15_onlychr19.fa.gz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;build_index.spikeins&quot;</span> <span class="p">:</span> <span class="s2">&quot;rna-seq-pipeline/test_data/ERCC_phiX.fa.gz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;build_index.annotation&quot;</span> <span class="p">:</span> <span class="s2">&quot;rna-seq-pipeline/test_data/gencodeV24pri-tRNAs-ERCC-phiX_onlychr19_and_spikeins.gtf.gz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;build_index.anno_version&quot;</span> <span class="p">:</span> <span class="s2">&quot;v24&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;build_index.genome&quot;</span> <span class="p">:</span> <span class="s2">&quot;GRCh38&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;build_index.index_type&quot;</span> <span class="p">:</span> <span class="s2">&quot;prep_star&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="rna-sequencing-pipeline">
 <h2>RNA-sequencing pipeline<a class="headerlink" href="#rna-sequencing-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>Example input for this workflow looks like this:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>{</dt>
+<dd>“rna.fastqs_R1” : [“/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz”, “/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz”],
+“rna.fastqs_R2” : [“/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz”, “/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz”],
+“rna.aligner” : “star”,
+“rna.index” : “/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz”,
+“rna.endedness” : “paired”,
+“rna.align_ncpus” : 3,
+“rna.align_ramGB” : 4,
+“rna.bamroot” : “foo_bam”,
+“rna.strandedness” : “unstranded”,
+“rna.strandedness_direction” : “unstranded”,
+“rna.chrom_sizes” : “/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes”,
+“rna.rsem_index” : “/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz”</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
 </div>
 </div>
 
