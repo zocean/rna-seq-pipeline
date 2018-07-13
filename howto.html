@@ -71,6 +71,9 @@
 </div>
 <div class="section" id="id5">
 <h3>how<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>The workflow for running the pipeline is rna-seq-pipeline/rna-seq-pipeline.wdl. Input file templates can be found in rna-seq-pipeline/input_json_templates.
+Local run command is:
+<code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">-Dconfig.file=backends/backend.conf</span> <span class="pre">cromwell.jar</span> <span class="pre">run</span> <span class="pre">rna-seq-pipeline.wdl</span> <span class="pre">-i</span> <span class="pre">your_input_here.json</span> <span class="pre">-o</span> <span class="pre">workflow_opts/docker.json</span> <span class="pre">-m</span> <span class="pre">metadata_testrun.json</span></code></p>
 </div>
 <div class="section" id="id6">
 <h3>why<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>

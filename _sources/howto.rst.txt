@@ -37,6 +37,9 @@ This is the main workflow for processing RNA-sequencing data.
 
 how
 ^^^^^^
-
+The workflow for running the pipeline is rna-seq-pipeline/rna-seq-pipeline.wdl. Input file templates can be found in rna-seq-pipeline/input_json_templates. 
+Local run command is:
+``java -jar -Dconfig.file=backends/backend.conf cromwell.jar run rna-seq-pipeline.wdl -i your_input_here.json -o workflow_opts/docker.json -m metadata_testrun.json``
+ 
 why
 ^^^^^
