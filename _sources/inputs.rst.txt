@@ -54,5 +54,5 @@ Example input for this workflow looks like this::
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
-``rna.fastqs_R1``
-``rna.fastqs_R2``
+* `rna.fastqs_R1`
+* `rna.fastqs_R2`
