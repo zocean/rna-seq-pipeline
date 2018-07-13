@@ -23,12 +23,13 @@ This code runs the ``ENCODE RNA-seq pipeline``.
 
 
 Requirements
-++++++++++++
+============
 
 To run the pipeline locally you need:
 
 * Java 8
 * `Cromwell <https://github.com/broadinstitute/cromwell>`_, the WDL runner 
+* `Docker <https://www.docker.com/get-docker>`_
 
 To run the pipeline on DNANexus cloud you need:
 
@@ -45,18 +46,14 @@ To run the pipeline on Google Cloud you need:
 .. _quickstart:
 
 Pipeline Overview
-+++++++++++++++++
+==================
 This is the ENCODE-DCC RNA-sequencing pipeline. The pipeline can be used for building index files for STAR and RSEM, although you only want to do this if your reference genome or spikeins are somehow non-standard. The index files for STAR can be found in https://www.encodeproject.org/references/ENCSR314WMD/ and index files for RSEM can be found in https://www.encodeproject.org/references/ENCSR219BJA/
 The main use of the pipeline is to alignment of reads, signal track generation, and quantification of genes and isoforms.
 
 
 Quickstart
-++++++++++
+===========
 
-
-
-Limitations
-+++++++++++
 
 
       
