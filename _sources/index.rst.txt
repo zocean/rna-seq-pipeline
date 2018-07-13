@@ -28,7 +28,7 @@ Requirements
 To run the pipeline locally you need:
 
 * Java 8
-* `Cromwell <https://github.com/broadinstitute/cromwell>_`, the WDL runner 
+* `Cromwell <https://github.com/broadinstitute/cromwell>`_, the WDL runner 
 
 To run the pipeline on DNANexus cloud you need:
 
