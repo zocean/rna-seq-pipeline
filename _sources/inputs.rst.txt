@@ -28,7 +28,7 @@ Example input for this workflow looks like this::
 
 RNA-sequencing pipeline
 ------------------------
-Example input for this workflow looks like this:
+Example input for this workflow looks like this::
 
     {
         "rna.fastqs_R1" : ["/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz", "/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz"],

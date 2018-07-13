@@ -63,24 +63,22 @@
 <div class="section" id="rna-sequencing-pipeline">
 <h2>RNA-sequencing pipeline<a class="headerlink" href="#rna-sequencing-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>Example input for this workflow looks like this:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>{</dt>
-<dd>“rna.fastqs_R1” : [“/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz”, “/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz”],
-“rna.fastqs_R2” : [“/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz”, “/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz”],
-“rna.aligner” : “star”,
-“rna.index” : “/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz”,
-“rna.endedness” : “paired”,
-“rna.align_ncpus” : 3,
-“rna.align_ramGB” : 4,
-“rna.bamroot” : “foo_bam”,
-“rna.strandedness” : “unstranded”,
-“rna.strandedness_direction” : “unstranded”,
-“rna.chrom_sizes” : “/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes”,
-“rna.rsem_index” : “/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz”</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;rna.fastqs_R1&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R1.fastq.gz&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;rna.fastqs_R2&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep1_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/original/ENCSR142YZV_rep2_1_star_genome_sorted_chr19only_R2.fastq.gz&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;rna.aligner&quot;</span> <span class="p">:</span> <span class="s2">&quot;star&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.index&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/longPE/test_align_script/GRCh38_v24_ERCC_phiX_starIndex_onlychr19.tgz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.endedness&quot;</span> <span class="p">:</span> <span class="s2">&quot;paired&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.align_ncpus&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;rna.align_ramGB&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;rna.bamroot&quot;</span> <span class="p">:</span> <span class="s2">&quot;foo_bam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.strandedness&quot;</span> <span class="p">:</span> <span class="s2">&quot;unstranded&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.strandedness_direction&quot;</span> <span class="p">:</span> <span class="s2">&quot;unstranded&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.chrom_sizes&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rna.rsem_index&quot;</span> <span class="p">:</span> <span class="s2">&quot;/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 
