@@ -1,2 +1,23 @@
 Inputs
 ====================================================
+This page shows an example input for each workflow associated to the RNA-sequencing pipeline. After example, each input item is described individually in more detail
+
+Merge Annotation
+-----------------
+Example input for this workflow looks like this::
+
+    {
+        "merge_anno.annotation" : "rna-seq-pipeline/test_data/gencode.v24.primary_assembly.annotation.gtf.gz",
+        "merge_anno.tRNA" : "rna-seq-pipeline/test_data/gencode.v24.tRNAs.gtf.gz",
+        "merge_anno.spikeins" : "rna-seq-pipeline/test_data/ERCC_phiX.fa.gz",
+        "merge_anno.output_filename" : "merged_annotation.gtf.gz"
+    } 
+
+Build Index
+-------------
+Example input for this workflow looks like this::
+
+
+RNA-sequencing pipeline
+------------------------
+Example input for this workflow looks like this:
