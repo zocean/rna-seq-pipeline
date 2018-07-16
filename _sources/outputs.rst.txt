@@ -1,3 +1,11 @@
 Outputs
 ====================================================
-Info on outputs here.
+
+Merge Annotation
+-----------------
+
+Build Index
+-------------
+
+RNA-sequencing pipeline
+-------------------------
