@@ -62,9 +62,9 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-             
+  
+   howto             
    inputs
-   howto
    reference
 
 
