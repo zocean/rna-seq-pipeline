@@ -18,7 +18,7 @@ Description of inputs
 
 * ``merge_anno.annotation`` Is the comprehensive gene annotation on the primary assembly (chromosomes and scaffolds) sequence regions. 
 * ``merge_anno.tRNA`` Is tRNA genes predicted by ENSEMBL on the reference chromosomes using tRNAscan-SE.
-* ``merge_anno.spikeins`` Is the spikein dataset used in the experiment.  
+* ``merge_anno.spikeins`` Is the spikein dataset used in the experiment. For more information and downloads look at `spikein pages found on ENCODE portal <https://www.encodeproject.org/search/?type=Reference&reference_type=spike-in>`_.
 * ``merge_anno.output_filename`` Is the name you want to give the output file (include gtf.gz postfix here).
 
 Build Index
@@ -38,11 +38,11 @@ Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * ``build_index.reference_genome`` Is the reference genome. For more information and downloads, look at `reference sequences page on ENCODE portal <https://www.encodeproject.org/data-standards/reference-sequences/>`_.
-* ``build_index.spikeins`` 
-* ``build_index.annotation``
-* ``build_index.anno_version``
-* ``build_index.genome``
-* ``build_index.index_type``
+* ``build_index.spikeins`` Is the spikein dataset used in the experiment. For more information and downloads look at `spikein pages found on ENCODE portal <https://www.encodeproject.org/search/?type=Reference&reference_type=spike-in>`_.
+* ``build_index.annotation`` Is the output produced by the Merge Annotation step.   
+* ``build_index.anno_version`` Is the annotation version.
+* ``build_index.genome`` Is the reference genome type (GRCh38, hg19, mm10 or mm9).
+* ``build_index.index_type`` Is the type of index you are building (prep_star, prep_rsem or prep_srna)
 
 RNA-sequencing pipeline
 ------------------------
