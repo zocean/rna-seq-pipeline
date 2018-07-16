@@ -16,10 +16,10 @@ Example input for this workflow looks like this::
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* ``merge_anno.annotation``
-* ``merge_anno.tRNA``
-* ``merge_anno.spikeins``
-* ``merge_anno.output_filename``
+* ``merge_anno.annotation`` Is the comprehensive gene annotation on the primary assembly (chromosomes and scaffolds) sequence regions. 
+* ``merge_anno.tRNA`` Is tRNA genes predicted by ENSEMBL on the reference chromosomes using tRNAscan-SE.
+* ``merge_anno.spikeins`` Spikein dataset used in the experiment. 
+* ``merge_anno.output_filename`` Name you want to give the output file (include gtf.gz postfix here).
 
 Build Index
 -------------
