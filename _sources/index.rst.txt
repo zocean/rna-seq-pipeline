@@ -65,7 +65,7 @@ Contents
   
    howto             
    inputs
-   reference
+   outputs
 
 
 Indices and tables
