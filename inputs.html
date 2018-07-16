@@ -102,8 +102,8 @@
 <div class="section" id="id3">
 <h3>Description of inputs<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R1</span></code> Is a list of gzipped fastq files. In paired-end mode these are the read 1 fastqs. In single-ended mode, put the fastqs here.</li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R2</span></code> Is a list of gzipped fastq files. In paired-end mode these are the read 2 fastqs. In single-ended mode, enter [].</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R1</span></code> Is a list of gzipped fastq files. In paired-end mode these are the read 1 fastqs. In single-ended mode, put the fastqs here. If your experiment consists of several replicates, list all corresponding fastq.gz files.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R2</span></code> Is a list of gzipped fastq files. In paired-end mode these are the read 2 fastqs, that have to be in order corresponding to read 1 fastqs. In single-ended mode, enter [].</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.aligner</span></code> This variable is for possible future extension. For now, always enter “star”.</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.index</span></code> Is the path to STAR index (downloaded or) produced by the Build Index step.</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.endedness</span></code> Is the endedness or the experiment (“paired” or “single”).</li>

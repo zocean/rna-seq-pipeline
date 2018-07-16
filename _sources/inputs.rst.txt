@@ -66,8 +66,8 @@ Example input for this workflow looks like this::
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* ``rna.fastqs_R1`` Is a list of gzipped fastq files. In paired-end mode these are the read 1 fastqs. In single-ended mode, put the fastqs here. 
-* ``rna.fastqs_R2`` Is a list of gzipped fastq files. In paired-end mode these are the read 2 fastqs. In single-ended mode, enter [].
+* ``rna.fastqs_R1`` Is a list of gzipped fastq files. In paired-end mode these are the read 1 fastqs. In single-ended mode, put the fastqs here. If your experiment consists of several replicates, list all corresponding fastq.gz files.
+* ``rna.fastqs_R2`` Is a list of gzipped fastq files. In paired-end mode these are the read 2 fastqs, that have to be in order corresponding to read 1 fastqs. In single-ended mode, enter [].
 * ``rna.aligner`` This variable is for possible future extension. For now, always enter "star".
 * ``rna.index`` Is the path to STAR index (downloaded or) produced by the Build Index step.
 * ``rna.endedness`` Is the endedness or the experiment ("paired" or "single").
