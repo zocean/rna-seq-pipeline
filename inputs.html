@@ -71,7 +71,7 @@
 <div class="section" id="id1">
 <h3>Description of inputs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">build_index.reference_genome</span></code> Is the reference genome. For more information and downloads, look at <a class="reference external" href="https://www.encodeproject.org/data-standards/reference-sequences/">reference sequences page on ENCODE portal</a>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">build_index.reference_genome</span></code> Is the reference genome. For more information and downloads, look at <a class="reference external" href="https://www.encodeproject.org/data-standards/reference-sequences/">references page on ENCODE portal</a> and <a class="reference external" href="https://www.encodeproject.org/references/ENCSR425FOI/">ENCSR425FOI on ENCODE portal</a>.</li>
 <li><code class="docutils literal notranslate"><span class="pre">build_index.spikeins</span></code> Is the spikein dataset used in the experiment. For more information and downloads look at <a class="reference external" href="https://www.encodeproject.org/search/?type=Reference&amp;reference_type=spike-in">spikein pages found on ENCODE portal</a>.</li>
 <li><code class="docutils literal notranslate"><span class="pre">build_index.annotation</span></code> Is the output produced by the Merge Annotation step.</li>
 <li><code class="docutils literal notranslate"><span class="pre">build_index.anno_version</span></code> Is the annotation version.</li>
@@ -102,18 +102,18 @@
 <div class="section" id="id3">
 <h3>Description of inputs<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R1</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R2</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.aligner</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.index</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.endedness</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.align_ncpus</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.align_ramGB</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.bamroot</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.strandedness</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.strandedness_direction</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.chrom_sizes</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.rsem_index</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R1</span></code> Is a list of gzipped fastq files. In paired-end mode these are the read 1 fastqs. In single-ended mode, put the fastqs here.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.fastqs_R2</span></code> Is a list of gzipped fastq files. In paired-end mode these are the read 2 fastqs. In single-ended mode, enter [].</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.aligner</span></code> This variable is for possible future extension. For now, always enter “star”.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.index</span></code> Is the path to STAR index (downloaded or) produced by the Build Index step.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.endedness</span></code> Is the endedness or the experiment (“paired” or “single”).</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.align_ncpus</span></code> Is the number of cpus used for computation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.align_ramGB</span></code> Is the amount of memory in GB.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.bamroot</span></code> Is the root for the name of output bams. For example “foo_bar_baz” produces foo_bar_baz_genome.bam and foo_bar_baz_anno.bam, prefixed by rep_[REP NUMBER]. This will also affect downstream filenames. More on the output description page (under construction..).</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.strandedness</span></code> Is the experiment stranded, or not (“stranded” or “unstranded”).</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.strandedness_direction</span></code> Is the strandedness direction (“forward”, “reverse” or “unstranded”)</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.chrom_sizes</span></code> Is the chromosome sizes file. For more information and downloads see <a class="reference external" href="https://www.encodeproject.org/references/ENCSR425FOI/">ENCODE portal</a>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.rsem_index</span></code> Is the path to RSEM index (downloaded or) produced by the Build Index step.</li>
 </ul>
 </div>
 </div>

@@ -37,7 +37,7 @@ Example input for this workflow looks like this::
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* ``build_index.reference_genome`` Is the reference genome. For more information and downloads, look at `reference sequences page on ENCODE portal <https://www.encodeproject.org/data-standards/reference-sequences/>`_.
+* ``build_index.reference_genome`` Is the reference genome. For more information and downloads, look at `references page on ENCODE portal <https://www.encodeproject.org/data-standards/reference-sequences/>`_ and `ENCSR425FOI on ENCODE portal <https://www.encodeproject.org/references/ENCSR425FOI/>`_.
 * ``build_index.spikeins`` Is the spikein dataset used in the experiment. For more information and downloads look at `spikein pages found on ENCODE portal <https://www.encodeproject.org/search/?type=Reference&reference_type=spike-in>`_.
 * ``build_index.annotation`` Is the output produced by the Merge Annotation step.   
 * ``build_index.anno_version`` Is the annotation version.
@@ -66,15 +66,15 @@ Example input for this workflow looks like this::
 Description of inputs
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* ``rna.fastqs_R1``
-* ``rna.fastqs_R2``
-* ``rna.aligner``
-* ``rna.index``
-* ``rna.endedness``
-* ``rna.align_ncpus``
-* ``rna.align_ramGB``
-* ``rna.bamroot``
-* ``rna.strandedness``
-* ``rna.strandedness_direction``
-* ``rna.chrom_sizes``
-* ``rna.rsem_index``
+* ``rna.fastqs_R1`` Is a list of gzipped fastq files. In paired-end mode these are the read 1 fastqs. In single-ended mode, put the fastqs here. 
+* ``rna.fastqs_R2`` Is a list of gzipped fastq files. In paired-end mode these are the read 2 fastqs. In single-ended mode, enter [].
+* ``rna.aligner`` This variable is for possible future extension. For now, always enter "star".
+* ``rna.index`` Is the path to STAR index (downloaded or) produced by the Build Index step.
+* ``rna.endedness`` Is the endedness or the experiment ("paired" or "single").
+* ``rna.align_ncpus`` Is the number of cpus used for computation.
+* ``rna.align_ramGB`` Is the amount of memory in GB.
+* ``rna.bamroot`` Is the root for the name of output bams. For example "foo_bar_baz" produces foo_bar_baz_genome.bam and foo_bar_baz_anno.bam, prefixed by rep_[REP NUMBER]. This will also affect downstream filenames. More on the output description page (under construction..).
+* ``rna.strandedness`` Is the experiment stranded, or not ("stranded" or "unstranded").
+* ``rna.strandedness_direction`` Is the strandedness direction ("forward", "reverse" or "unstranded")
+* ``rna.chrom_sizes`` Is the chromosome sizes file. For more information and downloads see `ENCODE portal <https://www.encodeproject.org/references/ENCSR425FOI/>`_.
+* ``rna.rsem_index`` Is the path to RSEM index (downloaded or) produced by the Build Index step.
