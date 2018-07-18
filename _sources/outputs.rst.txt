@@ -18,7 +18,7 @@ RNA-sequencing pipeline
 Alignment
 ^^^^^^^^^^
 
-* `genome .bam` 
+* ``genome .bam`` 
 * `annotation .bam`
 * `genome flagstat .txt`
 * `annotation flagstat .txt`
