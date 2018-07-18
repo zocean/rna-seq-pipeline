@@ -108,7 +108,7 @@
 <p><strong>NOTE</strong>: In case the experiment is paired-end, and consists of several replicates, take in account that the order of fastq files in the previous two arguments matter. For example, suppose the experiment has 3 replicates rep1, rep2 and rep3 with files <code class="docutils literal notranslate"><span class="pre">rep1_R1.fastq.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">rep1_R2.fastq.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">rep1_R3.fastq.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">rep2_R2.fastq.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">rep3_R1.fastq.gz</span></code> and <code class="docutils literal notranslate"><span class="pre">rep3_R2.fastq.gz</span></code>. In this case <code class="docutils literal notranslate"><span class="pre">fastqs_R1=[&quot;rep1_R1.fastq.gz&quot;,</span> <span class="pre">&quot;rep2_R1.fastq.gz&quot;,</span> <span class="pre">&quot;rep3_R1.fastq.gz&quot;]</span></code>, and <code class="docutils literal notranslate"><span class="pre">fastqs_R2=[&quot;rep1_R2.fastq.gz&quot;,</span> <span class="pre">&quot;rep2_R2.fastq.gz&quot;,</span> <span class="pre">&quot;rep3_R2.fastq.gz&quot;]</span></code>.</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">rna.aligner</span></code> This variable is for possible future extension. For now, always enter “star”.</li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.index</span></code> Is the path to STAR index (downloaded or) produced by the Build Index step.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.index</span></code> Is the path to STAR index (<a class="reference external" href="https://www.encodeproject.org/references/ENCSR314WMD/">downloaded from accession ENCSR314WMD</a> or) produced by the Build Index step.</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.endedness</span></code> Is the endedness or the experiment (“paired” or “single”).</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.align_ncpus</span></code> Is the number of cpus used for computation.</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.align_ramGB</span></code> Is the amount of memory in GB.</li>
@@ -116,7 +116,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">rna.strandedness</span></code> Is the experiment stranded, or not (“stranded” or “unstranded”).</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.strandedness_direction</span></code> Is the strandedness direction (“forward”, “reverse” or “unstranded”)</li>
 <li><code class="docutils literal notranslate"><span class="pre">rna.chrom_sizes</span></code> Is the chromosome sizes file. For more information and downloads see <a class="reference external" href="https://www.encodeproject.org/references/ENCSR425FOI/">ENCODE portal</a>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">rna.rsem_index</span></code> Is the path to RSEM index (downloaded or) produced by the Build Index step.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rna.rsem_index</span></code> Is the path to RSEM index (<a class="reference external" href="https://www.encodeproject.org/references/ENCSR219BJA/">downloaded from accession ENCSR219BJA</a> or) produced by the Build Index step.</li>
 </ul>
 </div>
 </div>
