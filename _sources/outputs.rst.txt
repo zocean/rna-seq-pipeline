@@ -19,19 +19,19 @@ Alignment
 ^^^^^^^^^^
 
 * ``genome .bam`` 
-* `annotation .bam`
-* `genome flagstat .txt`
-* `annotation flagstat .txt`
-* `alignment log .txt`
+* ``annotation .bam``
+* ``genome flagstat .txt``
+* ``annotation flagstat .txt``
+* ``alignment log .txt``
 
 Signal track generation
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* `signal track (bigwig) generated from uniquely mapped reads`
-* `signal track (bigwig) generated from all reads`
+* ``signal track (bigwig) generated from uniquely mapped reads``
+* ``signal track (bigwig) generated from all reads``
 
 Quantification
 ^^^^^^^^^^^^^^^^
 
-* `gene quantifications`
-* `isoform quantifications`
+* ``gene quantifications``
+* ``isoform quantifications``
