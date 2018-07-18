@@ -1,11 +1,37 @@
 Outputs
 ====================================================
+Files that pipeline components output are described here.
 
 Merge Annotation
 -----------------
+Single annotation file combined from annotations, spikeins and tRNAs. This file is consumed by Build Index step, both for STAR and RSEM.
 
 Build Index
 -------------
 
+* prep_star: STAR index used in alignment step in the RNA-sequencing pipeline.
+* prep_rsem: RSEM index used in quantification step in the RNA-sequencing pipeline.  
+
 RNA-sequencing pipeline
 -------------------------
+
+Alignment
+^^^^^^^^^^
+
+* `genome .bam` 
+* `annotation .bam`
+* `genome flagstat .txt`
+* `annotation flagstat .txt`
+* `alignment log .txt`
+
+Signal track generation
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `signal track (bigwig) generated from uniquely mapped reads`
+* `signal track (bigwig) generated from all reads`
+
+Quantification
+^^^^^^^^^^^^^^^^
+
+* `gene quantifications`
+* `isoform quantifications`
