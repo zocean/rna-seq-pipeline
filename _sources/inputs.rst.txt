@@ -61,6 +61,7 @@ Example input for this workflow looks like this::
         "rna.strandedness_direction" : "unstranded",
         "rna.chrom_sizes" : "/Users/otto/Documents/RNASeq/Testfiles/GRCh38_EBV.chrom.sizes",
         "rna.rsem_index" : "/Users/otto/Documents/RNASeq/Testfiles/prep-RSEM/Result/GRCh38_v24_ERCC_phiX_rsemIndex_onlychr19.tgz"
+        "rna.disks" : "local-disk 200 HDD"
     }
 
 Description of inputs
@@ -81,3 +82,4 @@ Description of inputs
 * ``rna.strandedness_direction`` Is the strandedness direction ("forward", "reverse" or "unstranded")
 * ``rna.chrom_sizes`` Is the chromosome sizes file. For more information and downloads see `ENCODE portal <https://www.encodeproject.org/references/ENCSR425FOI/>`_.
 * ``rna.rsem_index`` Is the path to RSEM index (`downloaded from accession ENCSR219BJA <https://www.encodeproject.org/references/ENCSR219BJA/>`_ or) produced by the Build Index step.
+* ``rna.disks`` Is an optional parameter, that defaults to 100GB of SSD drive. For a typical RNA-experiment 100GB is a stretch. Typically the fastq.gz files are about 5GB, and the .bam files that are output are 10-20GB, and additionally the STAR index is 25GB in compressed format. For example, if the experiment would be paired end with 3 replicates these filesizes would add up to TOTAL = 3 * 5GB * 2 (paired end!) + 3 * 15GB * 2 (genome .bam and annotation .bam for each replicate) + 25GB = 145GB. It is usually better to err to the side of caution when determining the disk size (cost of storage is usually small compared to the cost of computation), and in this case it would be prudent to allocate at least "local-disk 250 HDD" or "local-disk 250 SSD". 
