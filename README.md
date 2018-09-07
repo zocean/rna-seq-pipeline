@@ -6,6 +6,10 @@ OVERVIEW
 ------------
 This is the ENCODE-DCC RNA-sequencing pipeline. The scope of the pipeline is to align reads, generate signal tracks, and quantify genes and isoforms.
 
+INSTALLATION
+-------------
+Installation instructions [here](docs/installation.md)
+
 HOWTO
 ------
 Howto guides [here](docs/howto.md)
