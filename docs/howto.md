@@ -52,10 +52,16 @@ The purpose is to run a Single Ended, unstranded experiment on a local computer.
 }
 ```
 
-Replace `<path-to-repo>` with the location you cloned the code into.
+    Replace `<path-to-repo>` with the location you cloned the code into.
 
 
+4. Run the pipeline:
 
+```
+  $ java -jar -Dconfig.file=backends/backend.conf cromwell-34.jar run rna-seq-pipeline.wdl -i input.json -o workflow_opts/docker.json
+```
+
+5. See the outputs in `cromwell-executions/rna/[RUNHASH]`. See [reference](reference.md) for details about the output directory structure.
 
 
 Local with Singularity
