@@ -4,10 +4,10 @@ To run the pipeline you need to install following software. Running the pipeline
 
 Java 8
 -------
-Java is required to run execution engine [Cromwell](https://software.broadinstitute.org/wdl/documentation/execution) and WDL-to-DNANexus compiler [DxWDL](https://github.com/dnanexus/dxWDL).
+Java is required to run execution engine [Cromwell](https://software.broadinstitute.org/wdl/documentation/execution) and WDL-to-DNANexus compiler [dxWDL](https://github.com/dnanexus/dxWDL).
 To check which Java version you already have, run:
 ```bash
-java -version
+  $ java -version
 ```
 You are looking for 1.8 or higher. If the requirement is not fulfilled follow installation instructions for [mac](https://java.com/en/download/help/mac_install.xml) or
 [linux](http://openjdk.java.net/install/) or use your favorite installation method.
@@ -15,7 +15,11 @@ You are looking for 1.8 or higher. If the requirement is not fulfilled follow in
 Docker
 --------
 Pipeline code is packaged and distributed in Docker containers, and thus Docker installation is needed. 
-Follow instructions for [mac](https://docs.docker.com/docker-for-mac/install/) or [linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-after-using-the-convenience-script)
+Follow instructions for [mac](https://docs.docker.com/docker-for-mac/install/) or [linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-after-using-the-convenience-script).
+
+Singularity
+------------
+If for some reason (most likely because of limitations on your HPC resource) you cannot run Docker, install [singularity](https://singularity.lbl.gov/) and have a look at [HOWTO](howto.md) for an example of how to run pipeline with singularity. 
 
 Google Cloud
 --------------
@@ -57,5 +61,15 @@ If you are intending to run the pipeline on DNA Nexus, the following setup is ne
 1. Sign up for a [DNANexus account](https://platform.dnanexus.com/register).
 
 2. Create a new [DX project](https://platform.dnanexus.com/projects) with name `[YOUR_PROJECT_NAME]` by clicking on "+New Project" on the top left.
+
+3. Download dxWDL:
+    ```bash 
+      $ wget https://github.com/dnanexus/dxWDL/releases/download/0.75/dxWDL-0.75.jar
+    ```
+    
+4. Make dxWDL executable:
+    ```bash
+      $ chmod 755 dxWDL-0.75.jar
+    ```
 
 * For an example on hot to run the pipeline on DNA Nexus, see [HOWTO](howto.md)
