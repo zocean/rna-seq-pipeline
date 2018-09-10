@@ -118,7 +118,7 @@ Make sure you have completed the steps for installation and Google Cloud setup d
 }
 ```
 
-    Replace `[YOUR_BUCKET_NAME]` with the name of the actual bucket you created.
+Replace `[YOUR_BUCKET_NAME]` with the name of the actual bucket you created.
 
 5. Run the pipeline:
 
