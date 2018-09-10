@@ -8,7 +8,7 @@ RUNNING THE PIPELINE
 
 Local with Docker
 -------------------
-The purpose is to run a Single Ended, unstranded experiment on a local computer. 
+The purpose is to run a Single Ended, non strand specific experiment on a local computer. 
 
 1. Get the code:
 
@@ -64,18 +64,42 @@ The purpose is to run a Single Ended, unstranded experiment on a local computer.
 5. See the outputs in `cromwell-executions/rna/[RUNHASH]`. See [reference](reference.md) for details about the output directory structure.
 
 
+Google Cloud
+--------------
+The purpose is to run a Paired End, strand specific experiment on Google Cloud Platform.
+Make sure you have completed the steps for installation and Google Cloud setup described in the [installation instructions](installation.md). The following assumes your Google Cloud project is `[YOUR_PROJECT]`, you have created a bucket into `gs://[YOUR_BUCKET_NAME]`, and also directories `inputs`, `output` and `reference` in the bucket.
+
+1. Get the code:
+
+```bash
+  $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
+  $ cd rna-seq-pipeline
+```
+
+2. Get STAR and kallisto index files:
+
+```bash
+  $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz -o test_data/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz
+  $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx -o test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx 
+``` 
+
+
+
+DNA Nexus
+-----------
+The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform.
+
+1. Get the code:
+
+```bash
+  $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
+  $ cd rna-seq-pipeline
+```
+
 Local with Singularity
 ------------------------
 
 Coming soon!
-
-
-Google Cloud
-______________
-
-
-DNA Nexus
-__________
 
 
 SLURM with Singularity
