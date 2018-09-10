@@ -24,11 +24,11 @@ The purpose is to run a Single Ended, unstranded experiment on a local computer.
   $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx -o test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx 
 ``` 
 
-The other data that is required to complete this recipe is included in the repository within test_data directory.
+    The other data that is required to complete this recipe is included in the repository within test_data directory.
 
 3. Set up the input:
 
-Copy the following into input.json, and then open it in your favorite text editor.
+    Copy the following into input.json, and then open it in your favorite text editor.
 
 ```
 {
