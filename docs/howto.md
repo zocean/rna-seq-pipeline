@@ -93,7 +93,7 @@ Make sure you have completed the steps for installation and Google Cloud setup d
   $ gsutil cp test_data/GRCh38_EBV.chrom.sizes gs://[YOUR_BUCKET_NAME]/reference/ 
 ```
 
-4. Set up the `input.json`
+4. Set up the `input.json`:
 
     Copy the following into `input.json` in your favorite text editor.
 
