@@ -52,7 +52,7 @@ Copy the following into input.json, and then open it in your favorite text edito
 }
 ```
 
-Replace <path-to-repo> with the location you cloned the code into.
+Replace `<path-to-repo>` with the location you cloned the code into.
 
 
 
