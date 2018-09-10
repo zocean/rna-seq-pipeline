@@ -26,9 +26,9 @@ The purpose is to run a Single Ended, non strand specific experiment on a local 
 
     The other data that is required to complete this recipe is included in the repository within test_data directory.
 
-3. Set up the input:
+3. Set up the input.json:
 
-    Copy the following into input.json, and then open it in your favorite text editor.
+    Copy the following into input.json in your favorite text editor.
 
 ```
 {
@@ -83,7 +83,49 @@ Make sure you have completed the steps for installation and Google Cloud setup d
   $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx -o test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx 
 ``` 
 
+3. Copy indexes, and input data into the cloud:
 
+```bash
+  $ gsutil cp test_data/ENCSR653DFZ* gs://[YOUR_BUCKET_NAME]/inputs/
+  $ gsutil cp test_data/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz gs://[YOUR_BUCKET_NAME]/reference/
+  $ gsutil cp test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx gs://[YOUR_BUCKET_NAME]/reference/
+  $ gsutil cp test_data/GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz gs://[YOUR_BUCKET_NAME]/reference/
+  $ gsutil cp test_data/GRCh38_EBV.chrom.sizes gs://[YOUR_BUCKET_NAME]/reference/ 
+```
+
+4. Set up the input.json
+    Copy the following into input.json in your favorite text editor.
+
+```
+{
+    "rna.endedness" : "paired",
+    "rna.fastqs_R1" : ["gs://[YOUR_BUCKET_NAME]/inputs/ENCSR653DFZ_rep1_chr19_10000reads_R1.fastq.gz", "gs://[YOUR_BUCKET_NAME]/inputs/ENCSR653DFZ_rep2_chr19_10000reads_R1.fastq.gz"],
+    "rna.fastqs_R2" : ["gs://[YOUR_BUCKET_NAME]/inputs/ENCSR653DFZ_rep1_chr19_10000reads_R2.fastq.gz", "gs://[YOUR_BUCKET_NAME]/inputs/ENCSR653DFZ_rep2_chr19_10000reads_R2.fastq.gz"],
+    "rna.aligner" : "star",
+    "rna.index" : "gs://[YOUR_BUCKET_NAME]/reference/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz",
+    "rna.rsem_index" : "gs://[YOUR_BUCKET_NAME]/reference/GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz",
+    "rna.kallisto.kallisto_index" : "gs://[YOUR_BUCKET_NAME]/reference/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx",
+    "rna.bamroot" : "PE_stranded",
+    "rna.strandedness" : "stranded",
+    "rna.strandedness_direction" : "reverse",
+    "rna.chrom_sizes" : "gs://[YOUR_BUCKET_NAME]/reference/GRCh38_EBV.chrom.sizes",
+    "rna.align_ncpus" : 2,
+    "rna.align_ramGB" : 4,
+    "rna.disks" : "local-disk 20 HDD",
+    "rna.kallisto.number_of_threads" : 2,
+    "rna.kallisto.ramGB" : 4
+}
+```
+    Replace `[YOUR_BUCKET_NAME]` with the name of the actual bucket you created.
+
+5. Run the pipeline:
+
+```
+  $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=google -Dbackend.providers.google.config.project=[YOUR_PROJECT] -Dbackend.providers.google.config.root=gs://[YOUR_BUCKET_NAME]/output cromwell-34.jar run rna-seq-pipeline.wdl -i input.json -o workflow_opts/docker.json
+```
+    Replave `[YOUR_PROJECT]` with the project id of the project you created, and `[YOUR_BUCKET_NAME]` with the name of the bucket you created.
+
+6. See outputs in `gs://[YOUR_BUCKET_NAME]/outputs/rna/[RUNHASH]`. See [reference](reference.md) for details about the output directory structure.
 
 DNA Nexus
 -----------
