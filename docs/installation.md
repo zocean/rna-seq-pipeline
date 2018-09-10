@@ -1,6 +1,6 @@
 INSTALLATION
 =============
-To run the pipeline you need to install following software.
+To run the pipeline you need to install following software. Running the pipeline on Google Cloud or DNA Nexus requires additional setup detailed below.
 
 Java 8
 -------
@@ -43,10 +43,12 @@ If you are intending to run the pipeline on Google Cloud platform, the following
       unset GOOGLE_APPLICATION_CREDENTIALS
     ```
 
-7. Set your default Google Cloud Project. Pipeline will provision instances on this project.
+9. Set your default Google Cloud Project. Pipeline will provision instances on this project.
     ```
       $ gcloud config set project [YOUR_PROJECT_NAME]
     ```
+
+* For an example on how to run the pipeline on Google Cloud, see [HOWTO](howto.md).
 
 DNA Nexus
 -----------
@@ -55,3 +57,5 @@ If you are intending to run the pipeline on DNA Nexus, the following setup is ne
 1. Sign up for a [DNANexus account](https://platform.dnanexus.com/register).
 
 2. Create a new [DX project](https://platform.dnanexus.com/projects) with name `[YOUR_PROJECT_NAME]` by clicking on "+New Project" on the top left.
+
+* For an example on hot to run the pipeline on DNA Nexus, see [HOWTO](howto.md)
