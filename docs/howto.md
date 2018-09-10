@@ -26,9 +26,9 @@ The purpose is to run a Single Ended, non strand specific experiment on a local 
 
     The other data that is required to complete this recipe is included in the repository within test_data directory.
 
-3. Set up the input.json:
+3. Set up the `input.json`:
 
-    Copy the following into input.json in your favorite text editor.
+    Copy the following into `input.json` in your favorite text editor.
 
 ```
 {
@@ -93,8 +93,9 @@ Make sure you have completed the steps for installation and Google Cloud setup d
   $ gsutil cp test_data/GRCh38_EBV.chrom.sizes gs://[YOUR_BUCKET_NAME]/reference/ 
 ```
 
-4. Set up the input.json
-    Copy the following into input.json in your favorite text editor.
+4. Set up the `input.json`
+
+    Copy the following into `input.json` in your favorite text editor.
 
 ```
 {
