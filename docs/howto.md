@@ -24,20 +24,24 @@ The purpose is to run a Single Ended, unstranded experiment on a local computer.
   $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx -o test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx 
 ``` 
 
+The other data that is required to complete this recipe is included in the repository within test_data directory.
+
 3. Set up the input:
+
+Copy the following into input.json, and then open it in your favorite text editor.
 
 ```
 {
     "rna.endedness" : "single",
-    "rna.fastqs_R1" : ["test_data/rep1_ENCSR510QZW_chr19only_10000_reads.fastq.gz","test_data/rep2_ENCSR510QZW_chr19only_10000_reads.fastq.gz"],
+    "rna.fastqs_R1" : ["<path-to-repo>/rna-seq-pipeline/test_data/rep1_ENCSR510QZW_chr19only_10000_reads.fastq.gz","<path-to-repo>/rna-seq-pipeline/test_data/rep2_ENCSR510QZW_chr19only_10000_reads.fastq.gz"],
     "rna.aligner" : "star",
     "rna.bamroot" : "SE_unstranded",
-    "rna.index" : "test_data/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz",
-    "rna.rsem_index" : "test_data/GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz",
-    "rna.kallisto.kallisto_index" : "test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx",
+    "rna.index" : "<path-to-repo>/rna-seq-pipeline/test_data/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz",
+    "rna.rsem_index" : "<path-to-repo>/rna-seq-pipeline/test_data/GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz",
+    "rna.kallisto.kallisto_index" : "<path-to-repo>/rna-seq-pipeline/test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx",
     "rna.strandedness" : "unstranded",
     "rna.strandedness_direction" : "unstranded",
-    "rna.chrom_sizes" : "test_data/GRCh38_EBV.chrom.sizes",
+    "rna.chrom_sizes" : "<path-to-repo>/rna-seq-pipeline/test_data/GRCh38_EBV.chrom.sizes",
     "rna.align_ncpus" : 2,
     "rna.align_ramGB" : 4,
     "rna.disks" : "local-disk 20 HDD",
@@ -48,9 +52,11 @@ The purpose is to run a Single Ended, unstranded experiment on a local computer.
 }
 ```
 
+Replace <path-to-repo> with the location you cloned the code into.
 
 
-The other data that is required to complete this recipe is included in the repository within test_data directory.
+
+
 
 Local with Singularity
 ------------------------
