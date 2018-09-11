@@ -56,18 +56,20 @@ If you are intending to run the pipeline on Google Cloud platform, the following
 
 DNA Nexus
 -----------
-If you are intending to run the pipeline on DNA Nexus, the following setup is needed:
+If you are intending to build and run the pipeline on DNA Nexus, the following setup is needed:
 
 1. Sign up for a [DNANexus account](https://platform.dnanexus.com/register).
 
 2. Create a new [DX project](https://platform.dnanexus.com/projects) with name `[YOUR_PROJECT_NAME]` by clicking on "+New Project" on the top left.
 
-3. Download dxWDL:
+3. Install [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK). Run `dx login` to log in to the platform using your credentials.
+
+4. Download dxWDL:
     ```bash 
       $ wget https://github.com/dnanexus/dxWDL/releases/download/0.75/dxWDL-0.75.jar
     ```
-    
-4. Make dxWDL executable:
+
+5. Make dxWDL executable:
     ```bash
       $ chmod 755 dxWDL-0.75.jar
     ```

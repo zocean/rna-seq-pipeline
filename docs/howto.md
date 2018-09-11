@@ -132,7 +132,7 @@ Replace `[YOUR_PROJECT]` with the project id of the project you created, and `[Y
 
 DNA Nexus
 -----------
-The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform.
+The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md).
 
 1. Get the code:
 
@@ -140,6 +140,8 @@ The purpose is to run a Paired End, non strand specific experiment on DNA Nexus 
   $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
   $ cd rna-seq-pipeline
 ```
+
+
 
 Local with Singularity
 ------------------------
