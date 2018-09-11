@@ -69,7 +69,7 @@ Google Cloud
 The purpose is to run a Paired End, strand specific experiment on Google Cloud Platform.
 Make sure you have completed the steps for installation and Google Cloud setup described in the [installation instructions](installation.md). The following assumes your Google Cloud project is `[YOUR_PROJECT]`, you have created a bucket into `gs://[YOUR_BUCKET_NAME]`, and also directories `inputs`, `output` and `reference` in the bucket.
 
-1. Get the code:
+1. Get the code and move to the repo directory:
 
 ```bash
   $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
@@ -132,14 +132,27 @@ Replace `[YOUR_PROJECT]` with the project id of the project you created, and `[Y
 
 DNA Nexus
 -----------
-The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md).
+The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, created a new project `[YOUR_PROJECT_NAME]`, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md).
 
-1. Get the code:
+1. Get the code and move to the repo directory:
 
 ```bash
   $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
   $ cd rna-seq-pipeline
 ```
+
+2. Get STAR and kallisto index files:
+
+```bash
+  $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz -o test_data/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz
+  $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx -o test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx 
+``` 
+
+3. Go to [DNA Nexus website](https://www.dnanexus.com) and navigate to `[YOUR_PROJECT_NAME]`. Create a `test_run` directory with subdirectories `inputs`, `output`, `reference` and `workflow` (You can organize the directories any way you want, but this is one way to keep organized).
+
+4. Upload files from `test_data` folder into your DNA Nexus project. Put `ENCSR142YZV_chr19only_10000_reads_R1.fastq.gz` and `ENCSR142YZV_chr19only_10000_reads_R2.fastq.gz` into `inputs` folder. Put `GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz`, `GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz`, `Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx` and `GRCh38_EBV.chrom.sizes` into `reference` folder.
+
+
 
 
 

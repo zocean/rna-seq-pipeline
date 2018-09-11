@@ -74,4 +74,4 @@ If you are intending to build and run the pipeline on DNA Nexus, the following s
       $ chmod 755 dxWDL-0.75.jar
     ```
 
-* For an example on hot to run the pipeline on DNA Nexus, see [HOWTO](howto.md)
+* For an example on how to run the pipeline on DNA Nexus, see [HOWTO](howto.md)
