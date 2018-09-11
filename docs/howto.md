@@ -152,8 +152,46 @@ The purpose is to run a Paired End, non strand specific experiment on DNA Nexus 
 
 4. Upload files from `test_data` folder into your DNA Nexus project. Put `ENCSR142YZV_chr19only_10000_reads_R1.fastq.gz` and `ENCSR142YZV_chr19only_10000_reads_R2.fastq.gz` into `inputs` folder. Put `GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz`, `GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz`, `Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx` and `GRCh38_EBV.chrom.sizes` into `reference` folder.
 
+5. Setup the `input.json`: 
+    Copy the following into `input.json` in your favorite text editor.
+```
+{
+    "rna.endedness" : "paired",
+    "rna.fastqs_R1" : ["dx://[YOUR_PROJECT_NAME]:test_run/inputs/ENCSR142YZV_chr19only_10000_reads_R1.fastq.gz"],
+    "rna.fastqs_R2" : ["dx://[YOUR_PROJECT_NAME]:test_run/inputs/ENCSR142YZV_chr19only_10000_reads_R2.fastq.gz"],
+    "rna.aligner" : "star",
+    "rna.index" : "dx://[YOUR_PROJECT_NAME]:test_run/reference/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz",
+    "rna.rsem_index" : "dx://[YOUR_PROJECT_NAME]:test_run/reference/GRCh38_v24_ERCC_phiX_rsemIndex_chr19only.tgz",
+    "kallisto.kallisto_index" : "dx://[YOUR_PROJECT_NAME]:test_run/reference/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx",
+    "rna.bamroot" : "PE_unstranded",
+    "rna.strandedness" : "unstranded",
+    "rna.strandedness_direction" : "unstranded",
+    "rna.chrom_sizes" : "dx://[YOUR_PROJECT_NAME]:test_run/reference/GRCh38_EBV.chrom.sizes",
+    "rna.align_ncpus" : 2,
+    "rna.align_ramGB" : 4,
+    "rna.disks" : "local-disk 20 HDD",
+    "kallisto.number_of_threads" : 2,
+    "kallisto.ramGB" : 4    
+}
+```
 
+Replace `[YOUR_PROJECT_NAME]` with the actual name of the project you created.
 
+6. Compile the workflow:
+
+```bash
+  $ java -jar dxWDL-0.75.jar compile rna-seq-pipeline.wdl -project [YOUR_PROJECT_NAME] -f -folder /test_run/workflow -defaults input.json -extras workflow_opts/docker.json
+```
+
+7. Go to DNANexus [project page](https://platform.dnanexus.com/projects) and click on your project.
+
+8. Move to the directory `/test_run/workflow`
+
+9. You will find a DNA Nexus workflow called `rna` with all inputs and parameters defined. Click the `rna` workflow, and in the window that opens click `Workflow Actions` button in the upper right corner, and from the dropdown menu choose `Set output folder` and set `/test_run/output` as the output folder.
+
+10. Click the green `Run as Analysis` button to start the pipeline. You will be automatically redirected into the Monitor tab, where you can observe the pipeline run.
+
+11. When the pipeline is completed (15-20min) the outputs will appear in `/test_run/output` folder.
 
 
 Local with Singularity
