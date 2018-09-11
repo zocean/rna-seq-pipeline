@@ -19,7 +19,7 @@ Follow instructions for [mac](https://docs.docker.com/docker-for-mac/install/) o
 
 Singularity
 ------------
-If for some reason (most likely because of limitations on your HPC resource) you cannot run Docker, install [singularity](https://singularity.lbl.gov/) and have a look at [HOWTO](howto.md) for an example of how to run pipeline with singularity. 
+If for some reason (most likely because of limitations on your HPC resource) you cannot run Docker, install [singularity](https://singularity.lbl.gov/) and have a look at [HOWTO](howto.md#local-with-singularity) for an example of how to run pipeline with singularity. 
 
 Google Cloud
 --------------
@@ -52,7 +52,7 @@ If you are intending to run the pipeline on Google Cloud platform, the following
       $ gcloud config set project [YOUR_PROJECT_NAME]
     ```
 
-* For an example on how to run the pipeline on Google Cloud, see [HOWTO](howto.md).
+* For an example on how to run the pipeline on Google Cloud, see [HOWTO](howto.md#google-cloud).
 
 DNA Nexus
 -----------
@@ -74,4 +74,4 @@ If you are intending to build and run the pipeline on DNA Nexus, the following s
       $ chmod 755 dxWDL-0.75.jar
     ```
 
-* For an example on how to run the pipeline on DNA Nexus, see [HOWTO](howto.md)
+* For an example on how to run the pipeline on DNA Nexus, see [HOWTO](howto.md#dna-nexus)

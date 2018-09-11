@@ -67,7 +67,7 @@ The purpose is to run a Single Ended, non strand specific experiment on a local 
 Google Cloud
 --------------
 The purpose is to run a Paired End, strand specific experiment on Google Cloud Platform.
-Make sure you have completed the steps for installation and Google Cloud setup described in the [installation instructions](installation.md). The following assumes your Google Cloud project is `[YOUR_PROJECT]`, you have created a bucket into `gs://[YOUR_BUCKET_NAME]`, and also directories `inputs`, `output` and `reference` in the bucket.
+Make sure you have completed the steps for installation and Google Cloud setup described in the [installation instructions](installation.md#google-cloud). The following assumes your Google Cloud project is `[YOUR_PROJECT]`, you have created a bucket into `gs://[YOUR_BUCKET_NAME]`, and also directories `inputs`, `output` and `reference` in the bucket.
 
 1. Get the code and move to the repo directory:
 
@@ -132,7 +132,7 @@ Replace `[YOUR_PROJECT]` with the project id of the project you created, and `[Y
 
 DNA Nexus
 -----------
-The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, created a new project `[YOUR_PROJECT_NAME]`, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md).
+The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, created a new project `[YOUR_PROJECT_NAME]`, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md#dna-nexus).
 
 1. Get the code and move to the repo directory:
 
