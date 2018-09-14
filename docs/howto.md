@@ -225,7 +225,7 @@ $ SINGULARITY_PULLFOLDER=~/.singularity singularity pull docker://quay.io/encode
 $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=singularity cromwell-34.jar run rna-seq-pipeline.wdl -i test/test_workflow/SE_unstranded_input.json -o workflow_opts/singularity.json
 ```
 
-6. See outputs in cromwell-executions/rna/[RUNHASH]
+6. See outputs in `cromwell-executions/rna/[RUNHASH]`.
 
 
 SLURM with Singularity
