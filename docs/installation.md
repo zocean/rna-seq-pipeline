@@ -19,7 +19,7 @@ Follow instructions for [mac](https://docs.docker.com/docker-for-mac/install/) o
 
 Singularity
 ------------
-If for some reason (most likely because of limitations on your HPC resource) you cannot run Docker, install [singularity](https://singularity.lbl.gov/) and have a look at [HOWTO](howto.md#local-with-singularity) for an example of how to run pipeline with singularity. 
+If for some reason (most likely because of limitations on your HPC resource) you cannot run Docker, install [singularity](https://www.sylabs.io/guides/2.6/user-guide/installation.html) and have a look at [HOWTO](howto.md#local-with-singularity) for an example of how to run pipeline with singularity. Pipeline requires singularity version `>=2.5.2`, the link takes you to version `2.6.0`.
 
 Google Cloud
 --------------

@@ -8,7 +8,7 @@ RUNNING THE PIPELINE
 
 Local with Docker
 -------------------
-The purpose is to run a Single Ended, non strand specific experiment on a local computer. 
+The goal is to run a Single Ended, non strand specific experiment on a local computer. 
 
 1. Get the code:
 
@@ -66,7 +66,7 @@ The purpose is to run a Single Ended, non strand specific experiment on a local 
 
 Google Cloud
 --------------
-The purpose is to run a Paired End, strand specific experiment on Google Cloud Platform.
+The goal is to run a Paired End, strand specific experiment on Google Cloud Platform.
 Make sure you have completed the steps for installation and Google Cloud setup described in the [installation instructions](installation.md#google-cloud). The following assumes your Google Cloud project is `[YOUR_PROJECT]`, you have created a bucket into `gs://[YOUR_BUCKET_NAME]`, and also directories `inputs`, `output` and `reference` in the bucket.
 
 1. Get the code and move to the repo directory:
@@ -132,7 +132,7 @@ Replace `[YOUR_PROJECT]` with the project id of the project you created, and `[Y
 
 DNA Nexus
 -----------
-The purpose is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, created a new project `[YOUR_PROJECT_NAME]`, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md#dna-nexus).
+The goal is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, created a new project `[YOUR_PROJECT_NAME]`, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md#dna-nexus).
 
 1. Get the code and move to the repo directory:
 
@@ -197,7 +197,35 @@ Replace `[YOUR_PROJECT_NAME]` with the actual name of the project you created.
 Local with Singularity
 ------------------------
 
-Coming soon!
+The goal is to run Single End non strand specific experiment locally using singularity.
+
+1. Make sure you have singularity version greater or equal to `2.5.2` installed in your system. 
+
+2. Build the singularity image for the pipeline. The following pulls the pipeline docker image, and uses that to construct the singularity image. The image will be stored in `~/.singularity`.
+```
+$ SINGULARITY_PULLFOLDER=~/.singularity singularity pull docker://quay.io/encode-dcc/rna-seq-pipeline:template
+```
+
+3. Get the code and move to the repo directory:
+
+```bash
+  $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
+  $ cd rna-seq-pipeline
+```
+
+4. Get STAR and kallisto index files:
+
+```bash
+  $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz -o test_data/GRCh38_v24_ERCC_phiX_starIndex_chr19only.tgz
+  $ curl https://storage.googleapis.com/star-rsem-runs/reference-genomes/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx -o test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix_k31_kallisto.idx 
+``` 
+
+5. Run the pipeline:
+```
+$ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=singularity cromwell-34.jar run rna-seq-pipeline.wdl -i test/test_workflow/SE_unstranded_input.json -o workflow_opts/singularity.json
+```
+
+6. See outputs in cromwell-executions/rna/[RUNHASH]
 
 
 SLURM with Singularity
