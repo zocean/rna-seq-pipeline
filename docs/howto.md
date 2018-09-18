@@ -3,6 +3,11 @@ HOWTO
 Here are recipes for running analyses on different platforms.
 Before following these instructions, make sure you have completed installation and possible account setup detailed in [installation instructions](installation.md). 
 
+CONTENTS
+=========
+[Local with Docker](howto.md#local-with-docker)
+[Google Cloud](howto.md#google-cloud)
+
 RUNNING THE PIPELINE
 =====================
 
