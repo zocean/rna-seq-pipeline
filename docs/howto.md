@@ -5,7 +5,7 @@ Before following these instructions, make sure you have completed installation a
 
 CONTENTS
 =========
-[Local with Docker](howto.md#local-with-docker)
+[Local with Docker](howto.md#local-with-docker)  
 [Google Cloud](howto.md#google-cloud)
 
 RUNNING THE PIPELINE
