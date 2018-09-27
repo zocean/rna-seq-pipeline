@@ -70,6 +70,22 @@ A typical input file looks like this:
 Following elaborates the meaning of each line in the input file.
 
 * `rna.endedness` indicates whether the endedness of the experiment is `paired` or `single`. 
+* `rna.fastqs_R1`
+* `rna.fastqs_R2`
+* `rna.aligner`
+* `rna.index`
+* `rna.rsem_index`
+* `rna.kallisto.kallisto_index`
+* `rna.bamroot`
+* `rna.strandedness`
+* `rna.strandedness_direction`
+* `rna.chrom_sizes`
+* `rna.align_ncpus`
+* `rna.align_ramGB`
+* `rna.disks`
+* `rna.kallisto.number_of_threads`
+* `rna.kallisto.ramGB`
+
 
 
 ## Outputs
