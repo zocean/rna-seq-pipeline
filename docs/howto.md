@@ -1,13 +1,11 @@
-HOWTO
-========
+# HOWTO
+
 Here are recipes for running analyses on different platforms.
 Before following these instructions, make sure you have completed installation and possible account setup detailed in [installation instructions](installation.md). 
 
-CONTENTS
-=========
+# CONTENTS
 
-Running Analyses
------------------
+## Running Analyses
 
 [Google Cloud](howto.md#google-cloud)  
 [Local with Docker](howto.md#local-with-docker)  
@@ -15,14 +13,17 @@ Running Analyses
 [Local with Singularity](howto.md#local-with-singularity)  
 [Sherlock with Singularity](howto.md#sherlock-with-singularity)  
 
-Building indexes
------------------
+## Building indexes
 
-RUNNING THE PIPELINE
-=====================
+[Merge Annotation](howto.md#merge-annotation)
+[Build STAR Index](howto.md#build-star-index)
+[Build RSEM Index](howto.md#build-rsem-index)
+[Build Kallisto Index](howto.md#build-kallisto-index)
 
-Google Cloud
---------------
+# RUNNING THE PIPELINE
+
+## Google Cloud
+
 The goal is to run a Paired End, strand specific experiment on Google Cloud Platform.
 Make sure you have completed the steps for installation and Google Cloud setup described in the [installation instructions](installation.md#google-cloud). The following assumes your Google Cloud project is `[YOUR_PROJECT]`, you have created a bucket into `gs://[YOUR_BUCKET_NAME]`, and also directories `inputs`, `output` and `reference` in the bucket.
 
@@ -88,8 +89,8 @@ Replace `[YOUR_PROJECT]` with the project id of the project you created, and `[Y
 6. See outputs in `gs://[YOUR_BUCKET_NAME]/outputs/rna/[RUNHASH]`. See [reference](reference.md) for details about the output directory structure.
 
 
-Local with Docker
--------------------
+## Local with Docker
+
 The goal is to run a Single Ended, non strand specific experiment on a local computer. 
 
 1. Get the code:
@@ -146,8 +147,8 @@ The goal is to run a Single Ended, non strand specific experiment on a local com
 5. See the outputs in `cromwell-executions/rna/[RUNHASH]`. See [reference](reference.md) for details about the output directory structure.
 
 
-DNA Nexus
------------
+## DNA Nexus
+
 The goal is to run a Paired End, non strand specific experiment on DNA Nexus platform. Before starting, make sure you have created a DNA Nexus account, created a new project `[YOUR_PROJECT_NAME]`, installed the [DNA Nexus SDK](https://wiki.dnanexus.com/Downloads#DNAnexus-Platform-SDK), and downloaded dxWDL as detailed in the [installation instructions](installation.md#dna-nexus).
 
 1. Get the code and move to the repo directory:
@@ -210,8 +211,7 @@ Replace `[YOUR_PROJECT_NAME]` with the actual name of the project you created.
 11. When the pipeline is completed (15-20min) the outputs will appear in `/test_run/output` folder.
 
 
-Local with Singularity
-------------------------
+## Local with Singularity
 
 The goal is to run Single End non strand specific experiment locally using singularity.
 
@@ -244,8 +244,7 @@ $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=singularity cr
 6. See outputs in `cromwell-executions/rna/[RUNHASH]`.
 
 
-Sherlock with Singularity
------------------------------------------------------------------------------
+## Sherlock with Singularity
 
 The goal is to run a paired end, strand specific experiment on Sherlock using singularity.
 
@@ -315,5 +314,12 @@ The default SLURM partition is `normal`. If you want to use some other partition
 
 8. See the outputs in `cromwell-executions/rna/[RUNHASH]`.
 
-BUILDING INDEXES
-=================
+# BUILDING INDEXES
+
+## Merge Annotation
+
+## Build STAR Index
+
+## Build RSEM Index
+
+## Build Kallisto Index
