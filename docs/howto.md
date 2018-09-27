@@ -15,10 +15,10 @@ Before following these instructions, make sure you have completed installation a
 
 ## Building indexes
 
-[Merge Annotation](howto.md#merge-annotation)
-[Build STAR Index](howto.md#build-star-index)
-[Build RSEM Index](howto.md#build-rsem-index)
-[Build Kallisto Index](howto.md#build-kallisto-index)
+[Merge Annotation](howto.md#merge-annotation)  
+[Build STAR Index](howto.md#build-star-index)  
+[Build RSEM Index](howto.md#build-rsem-index)  
+[Build Kallisto Index](howto.md#build-kallisto-index)  
 
 # RUNNING THE PIPELINE
 
