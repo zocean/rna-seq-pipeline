@@ -69,9 +69,17 @@ A typical input file looks like this:
 
 Following elaborates the meaning of each line in the input file.
 
-* `rna.endedness` indicates whether the endedness of the experiment is `paired` or `single`. 
-* `rna.fastqs_R1`
-* `rna.fastqs_R2`
+* `rna.endedness` Indicates whether the endedness of the experiment is `paired` or `single`. 
+* `rna.fastqs_R1` Is list of gzipped fastq files containing the first pairs of reads.
+* `rna.fastqs_R2` Is list of gzipped fastq files containing the second pairs of reads. 
+
+#### Example:
+
+Assume you are running a paired end experiment with 3 replicates. The fastq files from the first replicate are `replicate1_read1.fastq.gz` and `replicate1_read2.fastq.gz`. The fastq files from the second replicate are `replicate2_read1.fastq.gz` and `replicate2_read2.fastq.gz`. Finally assume that the fastq files from the third replicate are `replicate3_read1.fastq.gz` and `replicate3_read2.fastq.gz`. In this case the input on the relevant part should be as follows:  
+`"rna.fastqs_R1" : ["replicate1_read1.fastq.gz", "replicate2_read1.fastq.gz", "replicate3_read1.fastq.gz"]`  
+`"rna.fastqs_R2" : ["replicate1_read2.fastq.gz", "replicate2_read2.fastq.gz", "replicate3_read2.fastq.gz"]`
+Note that it is very important that the replicates are in same order in both lists, this correspondence is used for pairing correct files with each other.
+
 * `rna.aligner`
 * `rna.index`
 * `rna.rsem_index`
