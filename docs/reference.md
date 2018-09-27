@@ -80,21 +80,35 @@ Assume you are running a paired end experiment with 3 replicates. The fastq file
 `"rna.fastqs_R2" : ["replicate1_read2.fastq.gz", "replicate2_read2.fastq.gz", "replicate3_read2.fastq.gz"]`  
 Note that it is very important that the replicates are in same order in both lists, this correspondence is used for pairing correct files with each other.
 
-* `rna.aligner`
-* `rna.index`
-* `rna.rsem_index`
-* `rna.kallisto.kallisto_index`
-* `rna.bamroot`
-* `rna.strandedness`
-* `rna.strandedness_direction`
-* `rna.chrom_sizes`
-* `rna.align_ncpus`
-* `rna.align_ramGB`
-* `rna.disks`
-* `rna.kallisto.number_of_threads`
-* `rna.kallisto.ramGB`
+* `rna.aligner` 
+* `rna.index` Is the index for STAR aligner. 
+* `rna.rsem_index` Is the index for RSEM quantifier.
+* `rna.kallisto.kallisto_index` Is the index for Kallisto quantifier.
+* `rna.bamroot` This is a prefix that gets added into the output filenames. Additionally the files are prefixed with information of the replicate they originate from.
 
+#### Example:
 
+Assume the `rna.bamroot` is `FOO`. Outputs from first replicate would be prefixed by `rep1FOO` and outputs from second replicate would be prefixed by `rep2FOO` etc.
+
+* `rna.strandedness` Indicates whether the experiment is `stranded` or `unstranded`.
+* `rna.strandedness_direction` Indicates the direction of strandedness. Options are `forward`, `reverse` and `unstranded`.
+* `rna.chrom_sizes` Is the file containing the chromosome sizes. You can find and download the files from [ENCODE portal](https://www.encodeproject.org/references/ENCSR425FOI/).
+* `rna.align_ncpus` How many cpus are available for STAR alignment and RSEM quantification.
+* `rna.align_ramGB` How many GBs of memory are available for STAR alignment and RSEM quantification.
+* `rna.disks` How much disk space is available for pipeline.
+* `rna.kallisto.number_of_threads` How many cpus are available for Kallisto quantification.
+* `rna.kallisto.ramGB` How many GBs of memory are available for Kallisto quantification. You can also specify the type of disk, `HDD` for a spinning disk and `SSD` for a solid state drive. 
+
+#### Example:
+
+Assume you want to allocate 100 gigabytes of spinning hard drive. In this case you would enter `"local-disk 100 HDD"`. If you want to allocate 111 gigabytes of solid state drive space, enter `"local-disk 111 SSD"`.
+
+#### Additional inputs when running single-ended experiments:
+
+Kallisto quantifier makes use of average fragment lenghts and standard deviations of those lengths. In the case of paired end experiments, those values can be calculated from the data, but in case of single-ended experiment those values must be provided.
+
+* `rna.kallisto.fragment_length` Is the average fragment length.
+* `rna.kallisto.sd_of_fragment_length` Is the standard deviation of the fragment lengths.
 
 ## Outputs
 
