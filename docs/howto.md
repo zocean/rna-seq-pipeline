@@ -349,8 +349,13 @@ There is no need to edit this file.
   $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=Local cromwell-34.jar run per_task_wdl/merge_anno.wdl -i input_json_templates/per_task_inputs/merge_anno_input.json -o workflow_opts/docker.json
 ```
 
+4. Find outputs in `cromwell-executions/merge_anno/[RUNHASH]`
 
 ## Build STAR Index
+
+The goal is to build on the previous step and build a STAR index using a local machine with Docker.
+
+1. Make sure you have run the [previous step](howto.md#merge-anno) and have located the output (`merged_annotation.gtf.gz`) of that step.  
 
 ## Build RSEM Index
 
