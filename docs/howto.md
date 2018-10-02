@@ -353,7 +353,7 @@ There is no need to edit this file.
 
 ## Build STAR Index
 
-The goal is to build on the previous step and build a STAR index using a local machine with Docker.
+The goal is to build on the previous step and build a STAR index, restricted to chromosome 19, using a local machine with Docker. 
 
 1. Make sure you have run the [previous step](howto.md#merge-annotation) and have located the output (`merged_annotation.gtf.gz`) of that step.  
 
