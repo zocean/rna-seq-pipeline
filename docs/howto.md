@@ -408,4 +408,33 @@ Open the file in your favorite text editor, and replace `[path-to-output]` with 
 ```
 
 4. Find output in `cromwell-executions/build_genome_index/[RUNHASH]`
+
 ## Build Kallisto Index
+
+The goal is to build index for Kallisto using a local machine with Docker.
+
+1. Get the code and move to the repo directory:
+
+```bash
+  $ git clone https://github.com/ENCODE-DCC/rna-seq-pipeline
+  $ cd rna-seq-pipeline
+```
+
+2. Find the input file `build_index_Kallisto.json` in `input_json_templates/per_task_inputs`. The file looks like this:
+
+```
+{
+    "build_index.reference_sequence" : "test_data/Homo_sapiens.GRCh38.cdna.all.chr19_ERCC_phix.fa.gz",
+    "build_index.index_type" : "prep_kallisto",
+}
+```
+
+As you can see, this file has less inputs than [STAR](howto.md#build-star-index) and [RSEM](howto.md#build-rsem-index) steps. The reason for this is that when building index kallisto uses only the transcriptome, and does not need annotations. Additionally the spikein sequences are concatenated into the reference file, instead of providing  them in a separate input. The inputs used in this example are [ERCC spikes](https://www.encodeproject.org/files/ENCFF001RTP/) and [Human cDNA](ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz), which is restricted to chromosome 19.
+
+3. Run the pipeline:
+
+```bash
+  $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=Local cromwell-34.jar run per_task_wdl/build_genome_index.wdl -i input_json_templates/per_task_inputs/build_index_Kallisto.json -o workflow_opts/docker.json
+```
+
+4. Find output in `cromwell-executions/build_genome_index/[RUNHASH]`
