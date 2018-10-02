@@ -349,14 +349,63 @@ There is no need to edit this file.
   $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=Local cromwell-34.jar run per_task_wdl/merge_anno.wdl -i input_json_templates/per_task_inputs/merge_anno_input.json -o workflow_opts/docker.json
 ```
 
-4. Find outputs in `cromwell-executions/merge_anno/[RUNHASH]`
+4. Find output in `cromwell-executions/merge_anno/[RUNHASH]`
 
 ## Build STAR Index
 
-The goal is to build on the previous step and build a STAR index, restricted to chromosome 19, using a local machine with Docker. 
+The goal is to build on the [previous step](howto.md#merge-annotation) and build a STAR index, restricted to chromosome 19, using a local machine with Docker. 
 
 1. Make sure you have run the [previous step](howto.md#merge-annotation) and have located the output (`merged_annotation.gtf.gz`) of that step.  
 
+2. Find the input file `build_index_STAR.json` in `input_json_templates/per_task_inputs`. The file looks like this:
+
+```
+{
+  "build_index.reference_sequence" : "test_data/GRCh38_no_alt_analysis_set_GCA_000001405.15_onlychr19.fa.gz",
+  "build_index.spikeins" : "test_data/ERCC_phiX.fa.gz",
+  "build_index.annotation" : "[path-to-output]/gencodeV24pri-tRNAs-ERCC-phiX_onlychr19_and_spikeins.gtf.gz",
+  "build_index.anno_version" : "v24",
+  "build_index.genome" : "GRCh38",
+  "build_index.index_type" : "prep_star"
+}
+```
+
+Open the file in your favorite text editor, and replace `[path-to-output]` with the path to the merged annotation file produced in the [previous step](howto.md#merge-annotation).
+
+3. Run the pipeline:
+
+```bash
+  $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=Local cromwell-34.jar run per_task_wdl/build_genome_index.wdl -i input_json_templates/per_task_inputs/build_index_STAR.json -o workflow_opts/docker.json
+```
+
+4. Find output in `cromwell-executions/build_genome_index/[RUNHASH]`
+
 ## Build RSEM Index
 
+The goal is to build on the [previous step](howto.md#merge-annotation) and build a RSEM index, restricted to chromosome 19, using a local machine with Docker. 
+
+1. Make sure you have run the [previous step](howto.md#merge-annotation) and have located the output (`merged_annotation.gtf.gz`) of that step.  
+
+2. Find the input file `build_index_RSEM.json` in `input_json_templates/per_task_inputs`. The file looks like this:
+
+```
+{
+  "build_index.reference_sequence" : "test_data/GRCh38_no_alt_analysis_set_GCA_000001405.15_onlychr19.fa.gz",
+  "build_index.spikeins" : "test_data/ERCC_phiX.fa.gz",
+  "build_index.annotation" : "[path-to-output]/gencodeV24pri-tRNAs-ERCC-phiX_onlychr19_and_spikeins.gtf.gz",
+  "build_index.anno_version" : "v24",
+  "build_index.genome" : "GRCh38",
+  "build_index.index_type" : "prep_rsem"
+}
+```
+
+Open the file in your favorite text editor, and replace `[path-to-output]` with the path to the merged annotation file produced in the [previous step](howto.md#merge-annotation).
+
+3. Run the pipeline:
+
+```bash
+  $ java -jar -Dconfig.file=backends/backend.conf -Dbackend.default=Local cromwell-34.jar run per_task_wdl/build_genome_index.wdl -i input_json_templates/per_task_inputs/build_index_RSEM.json -o workflow_opts/docker.json
+```
+
+4. Find output in `cromwell-executions/build_genome_index/[RUNHASH]`
 ## Build Kallisto Index
