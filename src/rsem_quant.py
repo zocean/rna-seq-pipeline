@@ -93,7 +93,7 @@ def main(args):
             bam_root=bam_root))
     logger.info('Running RSEM command %s', ' '.join(rsem_call))
     subprocess.call(rsem_call)
-    gene_quant_fn = bam_root + 'genes.results'
+    gene_quant_fn = str(bam_root) + '_rsem.genes.results'
     number_of_genes_detected = calculate_number_of_genes_detected(
         gene_quant_fn)
     number_of_genes_detected_dict = {
