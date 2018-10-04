@@ -99,7 +99,7 @@ def main(args):
     number_of_genes_detected_dict = {
         'number_of_genes_detected': number_of_genes_detected
     }
-    with open('number_of_genes_detected.json', 'w') as f:
+    with open(str(bam_root) + '_number_of_genes_detected.json', 'w') as f:
         json.dump(number_of_genes_detected_dict, f)
 
 
